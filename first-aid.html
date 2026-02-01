@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Aid Guide - HealthBridge Ethiopia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>HealthBridge Ethiopia</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a>
+                <a href="diseases.html"><i class="fas fa-heart"></i> Diseases</a>
+                <a href="first-aid.html"><i class="fas fa-book-medical"></i> First Aid</a>
+                <a href="health-tips.html"><i class="fas fa-book"></i> Health Tips</a>
+                <a href="ask-question.html"><i class="fas fa-comments"></i> Ask AI</a>
+                <a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="page-header">
+            <h1 class="page-title">First Aid Guide</h1>
+            <p class="page-subtitle">Step-by-step first aid instructions with instructional videos</p>
+        </div>
+
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+                <h3 style="font-weight: bold; margin-bottom: 0.5rem;">Emergency Services</h3>
+                <p style="margin-bottom: 0.5rem;">In case of a medical emergency, call <strong>911</strong> or your local emergency number immediately.</p>
+                <p>For Ethiopia: <strong>911</strong> or <strong>907</strong></p>
+            </div>
+        </div>
+
+        <div id="firstAidContent">
+            <div class="features-grid" id="categoriesGrid">
+                <div class="feature-card" onclick="showCategory('bleeding')" style="cursor: pointer;">
+                    <i class="fas fa-tint feature-icon"></i>
+                    <h3>Bleeding</h3>
+                    <p>How to stop bleeding and treat wounds</p>
+                    <div style="margin-top: 1rem; color: var(--medical-blue); font-weight: 600;">
+                        <i class="fas fa-video"></i> View Guide
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showCategory('burns')" style="cursor: pointer;">
+                    <i class="fas fa-fire feature-icon"></i>
+                    <h3>Burns</h3>
+                    <p>First aid for burn injuries</p>
+                    <div style="margin-top: 1rem; color: var(--medical-blue); font-weight: 600;">
+                        <i class="fas fa-video"></i> View Guide
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showCategory('fractures')" style="cursor: pointer;">
+                    <i class="fas fa-bone feature-icon"></i>
+                    <h3>Fractures</h3>
+                    <p>How to handle suspected fractures</p>
+                    <div style="margin-top: 1rem; color: var(--medical-blue); font-weight: 600;">
+                        <i class="fas fa-video"></i> View Guide
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showCategory('choking')" style="cursor: pointer;">
+                    <i class="fas fa-lungs feature-icon"></i>
+                    <h3>Choking</h3>
+                    <p>First aid for choking victims</p>
+                    <div style="margin-top: 1rem; color: var(--medical-blue); font-weight: 600;">
+                        <i class="fas fa-video"></i> View Guide
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showCategory('seizures')" style="cursor: pointer;">
+                    <i class="fas fa-brain feature-icon"></i>
+                    <h3>Seizures</h3>
+                    <p>How to help someone having a seizure</p>
+                    <div style="margin-top: 1rem; color: var(--medical-blue); font-weight: 600;">
+                        <i class="fas fa-video"></i> View Guide
+                    </div>
+                </div>
+                <div class="feature-card" onclick="showCategory('poisoning')" style="cursor: pointer;">
+                    <i class="fas fa-flask feature-icon"></i>
+                    <h3>Poisoning</h3>
+                    <p>First aid for poisoning</p>
+                    <div style="margin-top: 1rem; color: var(--medical-blue); font-weight: 600;">
+                        <i class="fas fa-video"></i> View Guide
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-warning" style="margin-top: 2rem;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p><strong>Important:</strong> This information is for educational purposes only and does not replace professional medical training. Always seek immediate medical help for serious injuries or emergencies.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>HealthBridge Ethiopia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthBridge Ethiopia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="first-aid.js"></script>
+</body>
+</html>

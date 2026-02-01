@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Healthcare Near Me - HealthBridge Ethiopia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>HealthBridge Ethiopia</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a>
+                <a href="diseases.html"><i class="fas fa-heart"></i> Diseases</a>
+                <a href="first-aid.html"><i class="fas fa-book-medical"></i> First Aid</a>
+                <a href="health-tips.html"><i class="fas fa-book"></i> Health Tips</a>
+                <a href="ask-question.html"><i class="fas fa-comments"></i> Ask AI</a>
+                <a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="page-header">
+            <h1 class="page-title">
+                <i class="fas fa-map-marker-alt"></i>
+                Find Healthcare Near Me
+            </h1>
+            <p class="page-subtitle">Locate nearby hospitals, clinics, and health centers</p>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <button onclick="getLocation()" id="locationBtn" class="btn btn-primary">
+                <i class="fas fa-crosshairs"></i>
+                Find Hospitals & Clinics Near Me
+            </button>
+        </div>
+
+        <div id="errorMessage" style="display: none;"></div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+            <div class="map-container" id="mapContainer">
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--gray-500); text-align: center;">
+                    <div>
+                        <i class="fas fa-map-marker-alt" style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                        <p>Click the button above to find healthcare facilities near you</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;" id="facilitiesTitle">Healthcare Facilities</h2>
+                <div id="facilitiesList">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-info" style="margin-top: 2rem;">
+            <i class="fas fa-info-circle"></i>
+            <p><strong>Note:</strong> This is a demonstration with sample locations. In a production environment, this would integrate with real healthcare facility databases and mapping services. For emergencies, always call <strong>911</strong> or your local emergency number.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>HealthBridge Ethiopia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthBridge Ethiopia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="healthcare.js"></script>
+</body>
+</html>

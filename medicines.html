@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicines A–Z - HealthBridge Ethiopia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>HealthBridge Ethiopia</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a>
+                <a href="diseases.html"><i class="fas fa-heart"></i> Diseases</a>
+                <a href="first-aid.html"><i class="fas fa-book-medical"></i> First Aid</a>
+                <a href="health-tips.html"><i class="fas fa-book"></i> Health Tips</a>
+                <a href="ask-question.html"><i class="fas fa-comments"></i> Ask AI</a>
+                <a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <!-- Header -->
+        <div class="page-header">
+            <h1 class="page-title">
+                <i class="fas fa-pills"></i>
+                Medicines A–Z
+            </h1>
+            <p class="page-subtitle">Comprehensive information about medications, their uses, and side effects</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div style="max-width: 600px; margin: 0 auto 2rem;">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input 
+                    type="text" 
+                    id="medicineSearch" 
+                    placeholder="Search medicine or disease" 
+                    class="search-input"
+                    onkeyup="filterMedicines()"
+                >
+            </div>
+        </div>
+
+        <!-- Alphabet Filter -->
+        <div class="alphabet-filter" id="alphabetFilter">
+            <!-- Will be populated by JavaScript -->
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="alert alert-warning">
+            <i class="fas fa-exclamation-circle"></i>
+            <p><strong>Important:</strong> This information is for educational purposes only and does not replace professional medical advice. Always consult a healthcare professional for diagnosis and treatment.</p>
+        </div>
+
+        <!-- Medicines List -->
+        <div id="medicinesList">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>HealthBridge Ethiopia</span>
+                    </div>
+                    <p>Trusted Health & Medicine Info for Ethiopia</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="medicines.html"><i class="fas fa-heart"></i> Medicines A–Z</a></li>
+                        <li><a href="diseases.html"><i class="fas fa-heart"></i> Diseases A–Z</a></li>
+                        <li><a href="first-aid.html"><i class="fas fa-book"></i> First Aid</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="ask-question.html"><i class="fas fa-comments"></i> AI Health Assistant</a></li>
+                        <li><a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a></li>
+                        <li><a href="disclaimer.html"><i class="fas fa-info-circle"></i> Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthBridge Ethiopia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="medicines-data.js"></script>
+    <script src="medicines.js"></script>
+</body>
+</html>

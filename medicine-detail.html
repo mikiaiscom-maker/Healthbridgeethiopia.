@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Details - HealthBridge Ethiopia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>HealthBridge Ethiopia</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a>
+                <a href="diseases.html"><i class="fas fa-heart"></i> Diseases</a>
+                <a href="first-aid.html"><i class="fas fa-book-medical"></i> First Aid</a>
+                <a href="health-tips.html"><i class="fas fa-book"></i> Health Tips</a>
+                <a href="ask-question.html"><i class="fas fa-comments"></i> Ask AI</a>
+                <a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <a href="medicines.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--medical-blue); text-decoration: none; margin-bottom: 1.5rem;">
+            <i class="fas fa-arrow-left"></i> Back to Medicines
+        </a>
+
+        <div id="medicineDetail">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>HealthBridge Ethiopia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthBridge Ethiopia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="medicines-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            
+            if (!id) {
+                window.location.href = 'medicines.html';
+                return;
+            }
+            
+            const medicine = window.getMedicineById ? window.getMedicineById(id) : null;
+            
+            if (!medicine) {
+                document.getElementById('medicineDetail').innerHTML = '<p>Medicine not found.</p>';
+                return;
+            }
+            
+            const container = document.getElementById('medicineDetail');
+            container.innerHTML = `
+                <div class="page-header" style="text-align: left; padding: 0 0 2rem;">
+                    <h1 class="page-title" style="justify-content: flex-start;">
+                        <i class="fas fa-pills"></i>
+                        ${medicine.name}
+                    </h1>
+                    ${medicine.genericName ? `<p style="font-size: 1.25rem; color: var(--gray-600);">Generic Name: ${medicine.genericName}</p>` : ''}
+                </div>
+
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p><strong>Important:</strong> This information is for educational purposes only and does not replace professional medical advice. Always consult a healthcare professional for diagnosis and treatment.</p>
+                </div>
+
+                <div class="content-card">
+                    <h2>What is ${medicine.name} used for?</h2>
+                    <ul>
+                        ${medicine.uses.map(use => `<li>${use}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h2>How it works</h2>
+                    <p>${medicine.howItWorks}</p>
+                </div>
+
+                <div class="content-card">
+                    <h2>Common Side Effects</h2>
+                    <ul>
+                        ${medicine.sideEffects.map(effect => `<li>${effect}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="content-card" style="background: var(--red-50); border-color: var(--red-200);">
+                    <h2 style="color: var(--red-900);">Warnings & Precautions</h2>
+                    <ul style="color: var(--red-800);">
+                        ${medicine.warnings.map(warning => `<li>${warning}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="content-card" style="background: var(--blue-50); border-color: var(--blue-200);">
+                    <h2 style="color: var(--medical-blue);">When to See a Doctor</h2>
+                    <ul style="color: var(--medical-blue);">
+                        ${medicine.whenToSeeDoctor.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="alert alert-info" style="margin-top: 2rem;">
+                    <i class="fas fa-info-circle"></i>
+                    <p>This information is for educational purposes only and does not replace professional medical advice.</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

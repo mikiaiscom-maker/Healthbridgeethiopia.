@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseases A–Z - HealthBridge Ethiopia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>HealthBridge Ethiopia</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a>
+                <a href="diseases.html"><i class="fas fa-heart"></i> Diseases</a>
+                <a href="first-aid.html"><i class="fas fa-book-medical"></i> First Aid</a>
+                <a href="health-tips.html"><i class="fas fa-book"></i> Health Tips</a>
+                <a href="ask-question.html"><i class="fas fa-comments"></i> Ask AI</a>
+                <a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="page-header">
+            <h1 class="page-title">
+                <i class="fas fa-heart"></i>
+                Diseases A–Z
+            </h1>
+            <p class="page-subtitle">Learn about common diseases, symptoms, causes, and prevention</p>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto 2rem;">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input 
+                    type="text" 
+                    id="diseaseSearch" 
+                    placeholder="Search diseases" 
+                    class="search-input"
+                    onkeyup="filterDiseases()"
+                >
+            </div>
+        </div>
+
+        <div class="alphabet-filter" id="alphabetFilter">
+            <!-- Will be populated by JavaScript -->
+        </div>
+
+        <div class="alert alert-warning">
+            <i class="fas fa-exclamation-circle"></i>
+            <p><strong>Important:</strong> This information is for educational purposes only and does not replace professional medical advice. Always consult a healthcare professional for diagnosis and treatment.</p>
+        </div>
+
+        <div id="diseasesList"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>HealthBridge Ethiopia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthBridge Ethiopia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="diseases-data.js"></script>
+    <script src="diseases.js"></script>
+</body>
+</html>

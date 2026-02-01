@@ -327,11 +327,45 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border: 1px solid var(--gray-100);
     transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(59, 130, 246, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-.feature-card:hover {
+.feature-card::after {
+    content: '\f061';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--medical-blue);
+    opacity: 0;
+    transition: all 0.3s;
+    font-size: 0.875rem;
+}
+
+.feature-card:hover::after,
+.feature-card:focus::after {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.feature-card:hover,
+.feature-card:active,
+.feature-card:focus {
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     transform: translateY(-2px);
+    border-color: var(--medical-blue);
+    outline: none;
+}
+
+.feature-card:active {
+    transform: translateY(0);
 }
 
 .feature-icon {
@@ -345,6 +379,11 @@ body {
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--gray-900);
+    transition: color 0.3s;
+}
+
+.feature-card:hover h3 {
+    color: var(--medical-blue);
 }
 
 .feature-card p {
@@ -1134,6 +1173,15 @@ iframe {
     a, button, .btn, .alphabet-btn, .feature-card {
         -webkit-tap-highlight-color: rgba(59, 130, 246, 0.2);
         touch-action: manipulation;
+    }
+    
+    .feature-card {
+        min-height: 48px;
+    }
+    
+    .feature-card:active {
+        background: var(--gray-50);
+        transform: scale(0.98);
     }
     
     /* Improve touch targets */

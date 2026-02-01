@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBridge Ethiopia - Trusted Health & Medicine Info</title>
+    <meta name="description" content="Clear, reliable, and easy-to-understand health information designed for everyone in Ethiopia.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>HealthBridge Ethiopia</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="medicines.html"><i class="fas fa-pills"></i> Medicines</a>
+                <a href="diseases.html"><i class="fas fa-heart"></i> Diseases</a>
+                <a href="first-aid.html"><i class="fas fa-book-medical"></i> First Aid</a>
+                <a href="health-tips.html"><i class="fas fa-book"></i> Health Tips</a>
+                <a href="ask-question.html"><i class="fas fa-comments"></i> Ask AI</a>
+                <a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">HealthBridge Ethiopia</h1>
+            <p class="hero-subtitle">Trusted Health & Medicine Info for Ethiopia</p>
+            <p class="hero-description">
+                Clear, reliable, and easy-to-understand health information designed for everyone.
+            </p>
+
+            <!-- Search Bar -->
+            <form class="search-form" onsubmit="handleSearch(event)">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="homeSearch" 
+                        placeholder="Search medicine or disease" 
+                        class="search-input"
+                    >
+                </div>
+            </form>
+
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+                <a href="medicines.html" class="btn btn-primary">
+                    <i class="fas fa-pills"></i>
+                    Browse Medicines A–Z
+                </a>
+                <a href="healthcare.html" class="btn btn-secondary">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Find Nearby Hospitals
+                </a>
+                <a href="first-aid.html" class="btn btn-outline">
+                    <i class="fas fa-stethoscope"></i>
+                    First Aid Guide
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Your Health Information Hub</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-pills feature-icon"></i>
+                    <h3>Medicines A–Z</h3>
+                    <p>Comprehensive information about medications, their uses, and side effects.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart feature-icon"></i>
+                    <h3>Diseases A–Z</h3>
+                    <p>Learn about common diseases, symptoms, causes, and prevention.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-stethoscope feature-icon"></i>
+                    <h3>First Aid</h3>
+                    <p>Step-by-step first aid guides with instructional videos.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marker-alt feature-icon"></i>
+                    <h3>Find Healthcare</h3>
+                    <p>Locate nearby hospitals, clinics, and health centers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer Banner -->
+    <section class="disclaimer-banner">
+        <div class="container">
+            <p>
+                <strong>Important:</strong> This information is for educational purposes only and does not replace professional medical advice. Always consult a healthcare professional for diagnosis and treatment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>HealthBridge Ethiopia</span>
+                    </div>
+                    <p>Trusted Health & Medicine Info for Ethiopia</p>
+                    <p class="footer-small">Educational health information platform</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="medicines.html"><i class="fas fa-heart"></i> Medicines A–Z</a></li>
+                        <li><a href="diseases.html"><i class="fas fa-heart"></i> Diseases A–Z</a></li>
+                        <li><a href="first-aid.html"><i class="fas fa-book"></i> First Aid</a></li>
+                        <li><a href="health-tips.html"><i class="fas fa-book"></i> Health Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="ask-question.html"><i class="fas fa-comments"></i> AI Health Assistant</a></li>
+                        <li><a href="healthcare.html"><i class="fas fa-map-marker-alt"></i> Find Healthcare</a></li>
+                        <li><a href="disclaimer.html"><i class="fas fa-info-circle"></i> Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Important</h3>
+                    <p class="footer-small">This platform provides educational health information only. It does not provide medical diagnosis or treatment.</p>
+                    <div class="emergency-box">
+                        <p class="emergency-title">Emergency?</p>
+                        <p>Call <strong>911</strong> or <strong>907</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthBridge Ethiopia. All rights reserved.</p>
+                <p>For educational purposes only. Always consult healthcare professionals for medical advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/251940471155?text=Hello,%20I%20need%20help%20with%20HealthBridge%20Ethiopia." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-button"
+       aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="medicines-data.js"></script>
+    <script src="diseases-data.js"></script>
+</body>
+</html>
